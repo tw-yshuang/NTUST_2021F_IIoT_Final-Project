@@ -1,0 +1,34 @@
+version: "3.8"
+
+services: 
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    volumes:
+      - ./Data/mosquitto/config:/mosquitto/config
+      - ./Data/mosquitto/data:/mosquitto/data
+      - ./Data/mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      - 9001:9001
+    
+  db:
+    image: mysql:latest
+    restart: always
+    volumes: 
+      - ./Data/mysql/data:/var/lib/mysql
+    environment:
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: testdb
+    ports:
+      - 3306:3306
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+# volumes:
+#   ./Data/mysql/data:

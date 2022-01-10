@@ -22,22 +22,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-css-reset@1.4.0/dist/reset.min.css"
     />
-    <link rel="stylesheet" href="/templates/led.css" />
-    <link rel="stylesheet" href="/templates/fan.css" />
+    <link rel="stylesheet" href="templates/led.css" />
+    <link rel="stylesheet" href="templates/fan.css" />
   </head>
   <body>
     <h1>IIOT Final Project Group03</h1>
     <input
       type="checkbox"
       id="lightToggle"
-      name="light_switch"
+      name="indoor_led"
       class="lightToggle--checkbox"
     />
     <label for="lightToggle" class="lightToggle--label">
       <span class="lightToggle--label-background"></span>
     </label>
     <div class="fan">
-      <input id="fanSwitch" type="checkbox" name="fan_switch"></input>
+      <input id="fanSwitch" type="checkbox" name="fan"></input>
       <div class="head">
         <div class="blades">
           <div class="blade"></div>
@@ -71,6 +71,7 @@
       var humility = echarts.init(document.getElementById("humility"), "roma", {
         renderer: "canvas",
       });
+      
 
       function fetchPyecharts(component, route) {
         $.ajax({
@@ -89,9 +90,9 @@
           url: `./${route}`,
           dataType: "json",
           success: function (result) {
-            console.log(result)
+            // console.log(result)
             $.each(result, function(key, value) {
-              $(`input[name="${key}"]`).prop("checked", value);
+              $(`input[name="${key}"]`).prop("checked", JSON.parse(value));
             }); 
           },
         });
@@ -108,8 +109,8 @@
       }
 
       $(function () {
-        receive_controller("lightToggle", "light_switch");
-        receive_controller("fanSwitch", "fan_switch");
+        receive_controller("lightToggle", "indoor_led");
+        receive_controller("fanSwitch", "fan");
       });
 
       function chartUpdate() {

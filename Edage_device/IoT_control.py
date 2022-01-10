@@ -9,7 +9,7 @@ from gpiozero import MCP3008
 class IoTController(object):
     # initial
     def __init__(self):
-        self.send_freq: int = 3  # sec
+        self.send_freq: int = 5  # sec
 
         self.DHT_PIN: int = 4
         self.MOTION_PIN: int = 21
@@ -55,7 +55,12 @@ class IoTController(object):
         else:
             GPIO.output(self.FAN_FIN, 0)
 
-    def recevice_data(self, i:int or None=None, isDebug:bool=False):
+    def recevice_data(self, i: int or None = None, isDebug: bool = False):
+        h: float
+        t: float
+        lux: float
+        motion: bool
+
         strat_time = time.time()
         h, t = self.get_DHT()
         lux = self.get_illumi()
@@ -88,6 +93,8 @@ class IoTController(object):
 
             with open(file_path, 'a') as f:
                 f.write(f'{time.time()}, {t}, {h}, {motion}, {lux}\n')
+
+        return (t, h, lux, motion)
 
 
 # Data -> write receive_data.txt file
