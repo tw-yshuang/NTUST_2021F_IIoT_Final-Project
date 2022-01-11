@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+    
+</head>
+<body>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, '0939508be7d04ef18d0dd74706dc6316')">temperature</button>
+            <button class="tablinks" onclick="showChart(event, '03b95db75668433bbbca5b7f5071a3d6')">humility</button>
+            <button class="tablinks" onclick="showChart(event, '3ab0353590664091a93580c6154ee36a')">illuminate</button>
+    </div>
+
+    <div class="box">
+                <div id="0939508be7d04ef18d0dd74706dc6316" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_0939508be7d04ef18d0dd74706dc6316 = echarts.init(
+            document.getElementById('0939508be7d04ef18d0dd74706dc6316'), 'white', {renderer: 'canvas'});
+        var option_0939508be7d04ef18d0dd74706dc6316 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "5 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    23
+                ],
+                [
+                    "20",
+                    23
+                ],
+                [
+                    "21",
+                    23
+                ],
+                [
+                    "22",
+                    22
+                ],
+                [
+                    "23",
+                    23
+                ],
+                [
+                    "0",
+                    23
+                ],
+                [
+                    "1",
+                    22
+                ],
+                [
+                    "2",
+                    23
+                ],
+                [
+                    "3",
+                    23
+                ],
+                [
+                    "4",
+                    23
+                ],
+                [
+                    "5",
+                    23
+                ],
+                [
+                    "6",
+                    23
+                ],
+                [
+                    "7",
+                    23
+                ],
+                [
+                    "8",
+                    22
+                ],
+                [
+                    "9",
+                    22
+                ],
+                [
+                    "10",
+                    23
+                ],
+                [
+                    "11",
+                    23
+                ],
+                [
+                    "12",
+                    23
+                ],
+                [
+                    "13",
+                    23
+                ],
+                [
+                    "14",
+                    24
+                ],
+                [
+                    "15",
+                    24
+                ],
+                [
+                    "16",
+                    24
+                ],
+                [
+                    "17",
+                    23
+                ],
+                [
+                    "18",
+                    22
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "4 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    22
+                ],
+                [
+                    "20",
+                    23
+                ],
+                [
+                    "21",
+                    22
+                ],
+                [
+                    "22",
+                    21
+                ],
+                [
+                    "23",
+                    21
+                ],
+                [
+                    "0",
+                    21
+                ],
+                [
+                    "1",
+                    21
+                ],
+                [
+                    "2",
+                    21
+                ],
+                [
+                    "3",
+                    22
+                ],
+                [
+                    "4",
+                    23
+                ],
+                [
+                    "5",
+                    23
+                ],
+                [
+                    "6",
+                    23
+                ],
+                [
+                    "7",
+                    23
+                ],
+                [
+                    "8",
+                    22
+                ],
+                [
+                    "9",
+                    23
+                ],
+                [
+                    "10",
+                    22
+                ],
+                [
+                    "11",
+                    23
+                ],
+                [
+                    "12",
+                    23
+                ],
+                [
+                    "13",
+                    22
+                ],
+                [
+                    "14",
+                    22
+                ],
+                [
+                    "15",
+                    23
+                ],
+                [
+                    "16",
+                    23
+                ],
+                [
+                    "17",
+                    24
+                ],
+                [
+                    "18",
+                    23
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "3 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    22
+                ],
+                [
+                    "20",
+                    22
+                ],
+                [
+                    "21",
+                    22
+                ],
+                [
+                    "22",
+                    21
+                ],
+                [
+                    "23",
+                    22
+                ],
+                [
+                    "0",
+                    22
+                ],
+                [
+                    "1",
+                    22
+                ],
+                [
+                    "2",
+                    22
+                ],
+                [
+                    "3",
+                    22
+                ],
+                [
+                    "4",
+                    22
+                ],
+                [
+                    "5",
+                    21
+                ],
+                [
+                    "6",
+                    21
+                ],
+                [
+                    "7",
+                    21
+                ],
+                [
+                    "8",
+                    22
+                ],
+                [
+                    "9",
+                    23
+                ],
+                [
+                    "10",
+                    23
+                ],
+                [
+                    "11",
+                    23
+                ],
+                [
+                    "12",
+                    22
+                ],
+                [
+                    "13",
+                    22
+                ],
+                [
+                    "14",
+                    23
+                ],
+                [
+                    "15",
+                    22
+                ],
+                [
+                    "16",
+                    23
+                ],
+                [
+                    "17",
+                    23
+                ],
+                [
+                    "18",
+                    23
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "2 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    22
+                ],
+                [
+                    "20",
+                    22
+                ],
+                [
+                    "21",
+                    21
+                ],
+                [
+                    "22",
+                    21
+                ],
+                [
+                    "23",
+                    22
+                ],
+                [
+                    "0",
+                    23
+                ],
+                [
+                    "1",
+                    22
+                ],
+                [
+                    "2",
+                    22
+                ],
+                [
+                    "3",
+                    21
+                ],
+                [
+                    "4",
+                    22
+                ],
+                [
+                    "5",
+                    22
+                ],
+                [
+                    "6",
+                    22
+                ],
+                [
+                    "7",
+                    22
+                ],
+                [
+                    "8",
+                    22
+                ],
+                [
+                    "9",
+                    21
+                ],
+                [
+                    "10",
+                    21
+                ],
+                [
+                    "11",
+                    23
+                ],
+                [
+                    "12",
+                    23
+                ],
+                [
+                    "13",
+                    22
+                ],
+                [
+                    "14",
+                    22
+                ],
+                [
+                    "15",
+                    23
+                ],
+                [
+                    "16",
+                    22
+                ],
+                [
+                    "17",
+                    23
+                ],
+                [
+                    "18",
+                    23
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "1 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    23
+                ],
+                [
+                    "20",
+                    23
+                ],
+                [
+                    "21",
+                    23
+                ],
+                [
+                    "22",
+                    23
+                ],
+                [
+                    "23",
+                    23
+                ],
+                [
+                    "0",
+                    22
+                ],
+                [
+                    "1",
+                    22
+                ],
+                [
+                    "2",
+                    21
+                ],
+                [
+                    "3",
+                    22
+                ],
+                [
+                    "4",
+                    22
+                ],
+                [
+                    "5",
+                    22
+                ],
+                [
+                    "6",
+                    22
+                ],
+                [
+                    "7",
+                    22
+                ],
+                [
+                    "8",
+                    22
+                ],
+                [
+                    "9",
+                    22
+                ],
+                [
+                    "10",
+                    22
+                ],
+                [
+                    "11",
+                    21
+                ],
+                [
+                    "12",
+                    22
+                ],
+                [
+                    "13",
+                    23
+                ],
+                [
+                    "14",
+                    22
+                ],
+                [
+                    "15",
+                    22
+                ],
+                [
+                    "16",
+                    22
+                ],
+                [
+                    "17",
+                    22
+                ],
+                [
+                    "18",
+                    23
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "5 day",
+                "4 day",
+                "3 day",
+                "2 day",
+                "1 day"
+            ],
+            "selected": {
+                "5 day": true,
+                "4 day": true,
+                "3 day": true,
+                "2 day": true,
+                "1 day": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "cross"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "type": "category",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "boundaryGap": false,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "type": "value",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisTick": {
+                "show": true,
+                "alignWithLabel": false,
+                "inside": false
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "temperature",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": [
+        {
+            "show": true,
+            "type": "slider",
+            "realtime": true,
+            "start": 20,
+            "end": 80,
+            "orient": "horizontal",
+            "zoomLock": false,
+            "filterMode": "filter"
+        }
+    ]
+};
+        chart_0939508be7d04ef18d0dd74706dc6316.setOption(option_0939508be7d04ef18d0dd74706dc6316);
+    </script>
+                <div id="03b95db75668433bbbca5b7f5071a3d6" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_03b95db75668433bbbca5b7f5071a3d6 = echarts.init(
+            document.getElementById('03b95db75668433bbbca5b7f5071a3d6'), 'white', {renderer: 'canvas'});
+        var option_03b95db75668433bbbca5b7f5071a3d6 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "5 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    48
+                ],
+                [
+                    "20",
+                    48
+                ],
+                [
+                    "21",
+                    50
+                ],
+                [
+                    "22",
+                    50
+                ],
+                [
+                    "23",
+                    53
+                ],
+                [
+                    "0",
+                    53
+                ],
+                [
+                    "1",
+                    52
+                ],
+                [
+                    "2",
+                    52
+                ],
+                [
+                    "3",
+                    51
+                ],
+                [
+                    "4",
+                    50
+                ],
+                [
+                    "5",
+                    49
+                ],
+                [
+                    "6",
+                    48
+                ],
+                [
+                    "7",
+                    46
+                ],
+                [
+                    "8",
+                    44
+                ],
+                [
+                    "9",
+                    43
+                ],
+                [
+                    "10",
+                    42
+                ],
+                [
+                    "11",
+                    42
+                ],
+                [
+                    "12",
+                    41
+                ],
+                [
+                    "13",
+                    40
+                ],
+                [
+                    "14",
+                    39
+                ],
+                [
+                    "15",
+                    39
+                ],
+                [
+                    "16",
+                    39
+                ],
+                [
+                    "17",
+                    39
+                ],
+                [
+                    "18",
+                    42
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "4 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    46
+                ],
+                [
+                    "20",
+                    46
+                ],
+                [
+                    "21",
+                    47
+                ],
+                [
+                    "22",
+                    47
+                ],
+                [
+                    "23",
+                    47
+                ],
+                [
+                    "0",
+                    48
+                ],
+                [
+                    "1",
+                    47
+                ],
+                [
+                    "2",
+                    48
+                ],
+                [
+                    "3",
+                    47
+                ],
+                [
+                    "4",
+                    48
+                ],
+                [
+                    "5",
+                    48
+                ],
+                [
+                    "6",
+                    48
+                ],
+                [
+                    "7",
+                    48
+                ],
+                [
+                    "8",
+                    50
+                ],
+                [
+                    "9",
+                    53
+                ],
+                [
+                    "10",
+                    52
+                ],
+                [
+                    "11",
+                    51
+                ],
+                [
+                    "12",
+                    48
+                ],
+                [
+                    "13",
+                    45
+                ],
+                [
+                    "14",
+                    42
+                ],
+                [
+                    "15",
+                    41
+                ],
+                [
+                    "16",
+                    40
+                ],
+                [
+                    "17",
+                    39
+                ],
+                [
+                    "18",
+                    41
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "3 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    42
+                ],
+                [
+                    "20",
+                    43
+                ],
+                [
+                    "21",
+                    44
+                ],
+                [
+                    "22",
+                    44
+                ],
+                [
+                    "23",
+                    44
+                ],
+                [
+                    "0",
+                    46
+                ],
+                [
+                    "1",
+                    47
+                ],
+                [
+                    "2",
+                    47
+                ],
+                [
+                    "3",
+                    46
+                ],
+                [
+                    "4",
+                    47
+                ],
+                [
+                    "5",
+                    47
+                ],
+                [
+                    "6",
+                    47
+                ],
+                [
+                    "7",
+                    48
+                ],
+                [
+                    "8",
+                    47
+                ],
+                [
+                    "9",
+                    48
+                ],
+                [
+                    "10",
+                    48
+                ],
+                [
+                    "11",
+                    49
+                ],
+                [
+                    "12",
+                    52
+                ],
+                [
+                    "13",
+                    52
+                ],
+                [
+                    "14",
+                    49
+                ],
+                [
+                    "15",
+                    44
+                ],
+                [
+                    "16",
+                    42
+                ],
+                [
+                    "17",
+                    39
+                ],
+                [
+                    "18",
+                    40
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "2 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    43
+                ],
+                [
+                    "20",
+                    43
+                ],
+                [
+                    "21",
+                    43
+                ],
+                [
+                    "22",
+                    43
+                ],
+                [
+                    "23",
+                    43
+                ],
+                [
+                    "0",
+                    42
+                ],
+                [
+                    "1",
+                    42
+                ],
+                [
+                    "2",
+                    44
+                ],
+                [
+                    "3",
+                    44
+                ],
+                [
+                    "4",
+                    44
+                ],
+                [
+                    "5",
+                    47
+                ],
+                [
+                    "6",
+                    47
+                ],
+                [
+                    "7",
+                    46
+                ],
+                [
+                    "8",
+                    47
+                ],
+                [
+                    "9",
+                    47
+                ],
+                [
+                    "10",
+                    48
+                ],
+                [
+                    "11",
+                    47
+                ],
+                [
+                    "12",
+                    48
+                ],
+                [
+                    "13",
+                    49
+                ],
+                [
+                    "14",
+                    52
+                ],
+                [
+                    "15",
+                    49
+                ],
+                [
+                    "16",
+                    44
+                ],
+                [
+                    "17",
+                    41
+                ],
+                [
+                    "18",
+                    40
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "1 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    47
+                ],
+                [
+                    "20",
+                    48
+                ],
+                [
+                    "21",
+                    48
+                ],
+                [
+                    "22",
+                    45
+                ],
+                [
+                    "23",
+                    44
+                ],
+                [
+                    "0",
+                    43
+                ],
+                [
+                    "1",
+                    43
+                ],
+                [
+                    "2",
+                    43
+                ],
+                [
+                    "3",
+                    43
+                ],
+                [
+                    "4",
+                    42
+                ],
+                [
+                    "5",
+                    43
+                ],
+                [
+                    "6",
+                    44
+                ],
+                [
+                    "7",
+                    45
+                ],
+                [
+                    "8",
+                    47
+                ],
+                [
+                    "9",
+                    47
+                ],
+                [
+                    "10",
+                    47
+                ],
+                [
+                    "11",
+                    47
+                ],
+                [
+                    "12",
+                    47
+                ],
+                [
+                    "13",
+                    48
+                ],
+                [
+                    "14",
+                    49
+                ],
+                [
+                    "15",
+                    52
+                ],
+                [
+                    "16",
+                    47
+                ],
+                [
+                    "17",
+                    41
+                ],
+                [
+                    "18",
+                    40
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "5 day",
+                "4 day",
+                "3 day",
+                "2 day",
+                "1 day"
+            ],
+            "selected": {
+                "5 day": true,
+                "4 day": true,
+                "3 day": true,
+                "2 day": true,
+                "1 day": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "cross"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "type": "category",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "boundaryGap": false,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "type": "value",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisTick": {
+                "show": true,
+                "alignWithLabel": false,
+                "inside": false
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "humility",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": [
+        {
+            "show": true,
+            "type": "slider",
+            "realtime": true,
+            "start": 20,
+            "end": 80,
+            "orient": "horizontal",
+            "zoomLock": false,
+            "filterMode": "filter"
+        }
+    ]
+};
+        chart_03b95db75668433bbbca5b7f5071a3d6.setOption(option_03b95db75668433bbbca5b7f5071a3d6);
+    </script>
+                <div id="3ab0353590664091a93580c6154ee36a" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_3ab0353590664091a93580c6154ee36a = echarts.init(
+            document.getElementById('3ab0353590664091a93580c6154ee36a'), 'white', {renderer: 'canvas'});
+        var option_3ab0353590664091a93580c6154ee36a = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "5 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    448
+                ],
+                [
+                    "20",
+                    446
+                ],
+                [
+                    "21",
+                    448
+                ],
+                [
+                    "22",
+                    447
+                ],
+                [
+                    "23",
+                    450
+                ],
+                [
+                    "0",
+                    476
+                ],
+                [
+                    "1",
+                    474
+                ],
+                [
+                    "2",
+                    475
+                ],
+                [
+                    "3",
+                    474
+                ],
+                [
+                    "4",
+                    474
+                ],
+                [
+                    "5",
+                    472
+                ],
+                [
+                    "6",
+                    475
+                ],
+                [
+                    "7",
+                    251
+                ],
+                [
+                    "8",
+                    236
+                ],
+                [
+                    "9",
+                    286
+                ],
+                [
+                    "10",
+                    476
+                ],
+                [
+                    "11",
+                    471
+                ],
+                [
+                    "12",
+                    471
+                ],
+                [
+                    "13",
+                    471
+                ],
+                [
+                    "14",
+                    471
+                ],
+                [
+                    "15",
+                    470
+                ],
+                [
+                    "16",
+                    476
+                ],
+                [
+                    "17",
+                    465
+                ],
+                [
+                    "18",
+                    478
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "4 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    224
+                ],
+                [
+                    "20",
+                    224
+                ],
+                [
+                    "21",
+                    224
+                ],
+                [
+                    "22",
+                    224
+                ],
+                [
+                    "23",
+                    224
+                ],
+                [
+                    "0",
+                    251
+                ],
+                [
+                    "1",
+                    350
+                ],
+                [
+                    "2",
+                    409
+                ],
+                [
+                    "3",
+                    543
+                ],
+                [
+                    "4",
+                    614
+                ],
+                [
+                    "5",
+                    456
+                ],
+                [
+                    "6",
+                    452
+                ],
+                [
+                    "7",
+                    447
+                ],
+                [
+                    "8",
+                    448
+                ],
+                [
+                    "9",
+                    461
+                ],
+                [
+                    "10",
+                    475
+                ],
+                [
+                    "11",
+                    474
+                ],
+                [
+                    "12",
+                    474
+                ],
+                [
+                    "13",
+                    243
+                ],
+                [
+                    "14",
+                    381
+                ],
+                [
+                    "15",
+                    471
+                ],
+                [
+                    "16",
+                    471
+                ],
+                [
+                    "17",
+                    474
+                ],
+                [
+                    "18",
+                    471
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "3 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    224
+                ],
+                [
+                    "20",
+                    518
+                ],
+                [
+                    "21",
+                    267
+                ],
+                [
+                    "22",
+                    242
+                ],
+                [
+                    "23",
+                    525
+                ],
+                [
+                    "0",
+                    605
+                ],
+                [
+                    "1",
+                    622
+                ],
+                [
+                    "2",
+                    474
+                ],
+                [
+                    "3",
+                    224
+                ],
+                [
+                    "4",
+                    224
+                ],
+                [
+                    "5",
+                    224
+                ],
+                [
+                    "6",
+                    242
+                ],
+                [
+                    "7",
+                    360
+                ],
+                [
+                    "8",
+                    508
+                ],
+                [
+                    "9",
+                    588
+                ],
+                [
+                    "10",
+                    453
+                ],
+                [
+                    "11",
+                    447
+                ],
+                [
+                    "12",
+                    456
+                ],
+                [
+                    "13",
+                    474
+                ],
+                [
+                    "14",
+                    474
+                ],
+                [
+                    "15",
+                    258
+                ],
+                [
+                    "16",
+                    472
+                ],
+                [
+                    "17",
+                    471
+                ],
+                [
+                    "18",
+                    473
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "2 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    303
+                ],
+                [
+                    "20",
+                    224
+                ],
+                [
+                    "21",
+                    234
+                ],
+                [
+                    "22",
+                    432
+                ],
+                [
+                    "23",
+                    561
+                ],
+                [
+                    "0",
+                    604
+                ],
+                [
+                    "1",
+                    257
+                ],
+                [
+                    "2",
+                    449
+                ],
+                [
+                    "3",
+                    237
+                ],
+                [
+                    "4",
+                    547
+                ],
+                [
+                    "5",
+                    613
+                ],
+                [
+                    "6",
+                    509
+                ],
+                [
+                    "7",
+                    224
+                ],
+                [
+                    "8",
+                    224
+                ],
+                [
+                    "9",
+                    237
+                ],
+                [
+                    "10",
+                    380
+                ],
+                [
+                    "11",
+                    577
+                ],
+                [
+                    "12",
+                    453
+                ],
+                [
+                    "13",
+                    447
+                ],
+                [
+                    "14",
+                    467
+                ],
+                [
+                    "15",
+                    474
+                ],
+                [
+                    "16",
+                    312
+                ],
+                [
+                    "17",
+                    471
+                ],
+                [
+                    "18",
+                    472
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "1 day",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": true,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "19",
+                    606
+                ],
+                [
+                    "20",
+                    608
+                ],
+                [
+                    "21",
+                    584
+                ],
+                [
+                    "22",
+                    448
+                ],
+                [
+                    "23",
+                    441
+                ],
+                [
+                    "0",
+                    224
+                ],
+                [
+                    "1",
+                    224
+                ],
+                [
+                    "2",
+                    398
+                ],
+                [
+                    "3",
+                    572
+                ],
+                [
+                    "4",
+                    450
+                ],
+                [
+                    "5",
+                    426
+                ],
+                [
+                    "6",
+                    235
+                ],
+                [
+                    "7",
+                    558
+                ],
+                [
+                    "8",
+                    615
+                ],
+                [
+                    "9",
+                    297
+                ],
+                [
+                    "10",
+                    224
+                ],
+                [
+                    "11",
+                    252
+                ],
+                [
+                    "12",
+                    458
+                ],
+                [
+                    "13",
+                    530
+                ],
+                [
+                    "14",
+                    447
+                ],
+                [
+                    "15",
+                    469
+                ],
+                [
+                    "16",
+                    381
+                ],
+                [
+                    "17",
+                    435
+                ],
+                [
+                    "18",
+                    472
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0.3
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "5 day",
+                "4 day",
+                "3 day",
+                "2 day",
+                "1 day"
+            ],
+            "selected": {
+                "5 day": true,
+                "4 day": true,
+                "3 day": true,
+                "2 day": true,
+                "1 day": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "cross"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "type": "category",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "boundaryGap": false,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "type": "value",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisTick": {
+                "show": true,
+                "alignWithLabel": false,
+                "inside": false
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "illuminate",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": [
+        {
+            "show": true,
+            "type": "slider",
+            "realtime": true,
+            "start": 20,
+            "end": 80,
+            "orient": "horizontal",
+            "zoomLock": false,
+            "filterMode": "filter"
+        }
+    ]
+};
+        chart_3ab0353590664091a93580c6154ee36a.setOption(option_3ab0353590664091a93580c6154ee36a);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

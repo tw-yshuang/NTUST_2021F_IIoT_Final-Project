@@ -11,6 +11,7 @@ flask-bootstrap = "*"
 flask-wtf = "*"
 wtforms = "*"
 paho-mqtt = "*"
+numpy = "*"
 
 [dev-packages]
 black = "*"

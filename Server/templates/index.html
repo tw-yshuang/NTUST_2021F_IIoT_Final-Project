@@ -24,6 +24,7 @@
     />
     <link rel="stylesheet" href="templates/led.css" />
     <link rel="stylesheet" href="templates/fan.css" />
+    <link rel="stylesheet" href="templates/sun.css" />
   </head>
   <body>
     <h1>IIOT Final Project Group03</h1>
@@ -36,6 +37,21 @@
     <label for="lightToggle" class="lightToggle--label">
       <span class="lightToggle--label-background"></span>
     </label>
+    <section class="c-sun" style="width: 100px; height: 100px; float: right; right: 50px; top:-75px" >
+      <div class="c-sun__circle">
+        <p id="illuminate" style="font-size:30px; line-height: 100px; text-align:center;"></p>
+      </div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+      <div class="c-sun__arrow"></div>
+    </section>
     <div class="fan">
       <input id="fanSwitch" type="checkbox" name="fan"></input>
       <div class="head">
@@ -52,26 +68,80 @@
       <label for="fanSwitch" class="fanSwitch"></label>
     </div>
     <div class="background"></div>
-    <div
-      id="barChart"
-      style="width: 600px; height: 500px; border-style: dashed; float: left"
-    ></div>
+    <div style="width: 400px; height: 400px; border-style: dashed; float: left; margin: auto; position: relative;" >
+      <img src="templates/images/temp.png" alt=""></img>
+      <font class="divtempnum" style="position: absolute; font-size:30px; right:0px; bottom: 0px;">℃</font>
+      <span id="temperature" style="position: absolute; font-size:50px; right:30px; bottom: 0px;"></span>
+      </div>
+    </div>
     <div
       id="humility"
-      style="width: 500px; height: 500px; border-style: dashed; float: left"
+      style="width: 400px; height: 400px; border-style: dashed; float: left"
     ></div>
+    <table style="width: 1100px; height: 650px; border-style: dashed;">
+      <td>
+        <form method="post" style="left: 10px; position: relative">
+          <label>Sensor Name:</label><br>
+          <!-- <input type="text" name="sensor" style="width:100pt;"><br> -->
+          <select name="sensor">
+            <option value="temperature">temperature</option>
+            <option value="humility">humility</option>
+            <option value="illuminate">illuminate</option>
+          </select>
+          <label>Days:</label><br>
+          <select name="days">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select><br>
+          <input type="submit" name="send" value="submit">
+        </form>
+      </td>
+      <td>
+        <div id="dayLine"style="width: 1000px; height: 600px; float: right">
+        <!-- <div  style="float: left; position: absolute;"></div> -->
+        </div>
+      </td>
+    </table>
+    <!-- <div
+      id="barChart"
+      style="width: 600px; height: 500px; border-style: dashed; float: left"
+    ></div> -->
     <script>
-      var barChart = echarts.init(
-        document.getElementById("barChart"),
+      // let barChart = echarts.init(
+      //   document.getElementById("barChart"),
+      //   "wonderland",
+      //   {
+      //     renderer: "canvas",
+      //   }
+      // );
+
+      let dayLine = echarts.init(
+        document.getElementById("dayLine"),
         "wonderland",
         {
           renderer: "canvas",
         }
       );
-      var humility = echarts.init(document.getElementById("humility"), "roma", {
+
+      let humility = echarts.init(document.getElementById("humility"), "roma", {
         renderer: "canvas",
       });
-      
+
+      function fetchCssGraph(route) {
+        $.ajax({
+          type: "GET",
+          url: `./${route}`,
+          dataType: "json",
+          success: function (result) {
+            document.getElementById(`${route}`).textContent = `${result}`;
+          },
+        });
+      }
 
       function fetchPyecharts(component, route) {
         $.ajax({
@@ -114,12 +184,15 @@
       });
 
       function chartUpdate() {
-        fetchPyecharts(barChart, "barChart");
+        // fetchPyecharts(barChart, "barChart");
         fetchPyecharts(humility, "humility");
         fetchController("controller-trans");
+        fetchCssGraph("illuminate")
+        fetchCssGraph("temperature")
       }
 
       $(function () {
+        fetchPyecharts(dayLine, "dayLine")
         chartUpdate();
         setInterval(chartUpdate, 2000);
       });
