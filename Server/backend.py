@@ -37,6 +37,7 @@ def index():
 def receive_controller():
     # aa = request.args
     # print(aa[0])
+
     args = request.args
     DEVICE_DICT.update(args)
     for device, isON in args.items():
@@ -183,7 +184,6 @@ def receive_edge(client, userdata, msg):
     # op_signal = float(msg.payload.decode('utf-8')) if sensor_name != 'Motion' else bool(msg.payload.decode('utf-8'))
 
     data = msg.payload.decode('utf-8')[1:-1].split(', ')
-    print
     insert_db(data)
     DEVICE_DICT.update(dict(zip(SENSOR_LIST, data)))
     print(DEVICE_DICT)
@@ -205,7 +205,7 @@ def data_analysis(last_day: int):
     last_day += 1
     for hr in range(0, 24):
         source = get_data(from_unix=time.time() - (24 - hr) * last_day * 60 * 60, to_unix=time.time() - (23 - hr) * last_day * 60 * 60)
-        source = np.array(source, dtype=np.object_)
+        source = np.array(source, dtype=np.object_) if source != [] else np.array([[0, 0, 0, 0, 0]], dtype=np.object_)
         time_block[0].append(int(sum(source[:, 2]) / source.shape[0]))
         time_block[1].append(int(sum(source[:, 3]) / source.shape[0]))
         time_block[2].append(int(sum(source[:, 4]) / source.shape[0]))
@@ -221,7 +221,7 @@ def main():
         print("Successfully copy file.")
 
     global DEVICE_DICT, SENSOR_LIST, CLIENT, CHART_DISPLAY, CHART_DAYS
-    DEVICE_DICT = {}  # {light_switch: bool, fan_switch: bool}
+    DEVICE_DICT = {'temperature': '25.0', 'humility': '44.3', 'illuminate': '506.2', 'motion': 'true'}
     SENSOR_LIST = ['temperature', 'humility', 'illuminate', 'motion']
     CLIENT = get_mqtt_client(msg_func=receive_edge)
     CHART_DISPLAY = 'humility'
