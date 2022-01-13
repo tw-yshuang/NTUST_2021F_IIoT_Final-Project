@@ -223,7 +223,7 @@ def main():
     global DEVICE_DICT, SENSOR_LIST, CLIENT, CHART_DISPLAY, CHART_DAYS
     DEVICE_DICT = {'temperature': '25.0', 'humility': '44.3', 'illuminate': '506.2', 'motion': 'true'}
     SENSOR_LIST = ['temperature', 'humility', 'illuminate', 'motion']
-    CLIENT = get_mqtt_client(msg_func=receive_edge)
+    CLIENT = get_mqtt_client('username', 'userpassword', 'ip', msg_func=receive_edge) # input your mqtt_info. & ip
     CHART_DISPLAY = 'humility'
     CHART_DAYS = 3
 

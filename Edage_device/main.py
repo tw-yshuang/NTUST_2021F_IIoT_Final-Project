@@ -23,7 +23,7 @@ def main():
         shutil.copy('./default_sensor-data.db', db_path)
         print("Successfully copy file.")
 
-    client = get_mqtt_client(msg_func=on_message)
+    client = get_mqtt_client('username', 'userpassword', 'ip', msg_func=on_message) # input your mqtt_info. & ip
 
     sensor_list = ['Temperature', 'Humility', 'Illuminate', 'Motion']
     while True:

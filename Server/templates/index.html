@@ -171,7 +171,7 @@
       function receive_controller(checkboxID, parameterName) {
         $(`#${checkboxID}`).click(function () {
           const checked = $(this).prop("checked");
-          let fetchURL = new URL("http://140.118.120.52:8000/controller-receive");
+          let fetchURL = new URL("http://0.0.0.0:8000/controller-receive"); // put your ip addr. in here!!
           const searchParams = new URLSearchParams([[`${parameterName}` , `${checked}`]]);
           fetchURL.search = searchParams;
           fetch(fetchURL.href).then();

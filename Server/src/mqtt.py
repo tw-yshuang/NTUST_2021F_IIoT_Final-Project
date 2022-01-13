@@ -22,12 +22,7 @@ def on_publish(client, userdata, mid):
     print("message published")
 
 
-def get_mqtt_client(
-    username: str = 'tw-yshuang',
-    userpassword: str = '1206',
-    ip: str = '140.118.120.52',
-    msg_func: on_message = on_message,
-):
+def get_mqtt_client(username: str, userpassword:str, ip:str, msg_func: on_message = on_message):
 
     # 連線設定
     # 初始化地端程式
